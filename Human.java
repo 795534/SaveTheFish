@@ -12,8 +12,30 @@ public class Human extends Actor
      * Act - do whatever the Human wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    private int speed = 5;
+    private GreenfootImage rightScuba = new GreenfootImage("rightScuba.png");
+    //rightScuba.scale(rightScuba.getWidth()-20, rightScuba.getHeight()-20);
+    private GreenfootImage leftScuba = new GreenfootImage("leftScuba.png");
+    
     public void act() 
     {
-        // testing if human works
+        checkKeys();
     }    
+    
+    private void checkKeys()
+    {
+        if(Greenfoot.isKeyDown("right"))
+        {
+            setImage(rightScuba);
+            move(2);
+        }
+        if(Greenfoot.isKeyDown("left"))
+        {
+            setImage(leftScuba);
+            move(-2);
+        }
+    }
+
+    
 }
+
