@@ -33,6 +33,14 @@ public class Human extends Actor
             setImage(leftScuba);
             move(-2);
         }
+        if(Greenfoot.isKeyDown("down"))
+        {
+            setLocation(getX(), getY()+2);
+        }
+        if(Greenfoot.isKeyDown("up"))
+        {
+            setLocation(getX(), getY()-2);
+        }
     }
 
     
