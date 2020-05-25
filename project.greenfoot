@@ -1,6 +1,7 @@
 #Greenfoot project file
 class.Dolphin.image=dolphin.png
 class.Human.image=rightScuba.png
+class.Ocean.image=Ocean3.png
 dependency1.from=Ocean
 dependency1.to=Dolphin
 dependency1.type=UsesDependency
@@ -10,10 +11,10 @@ dependency2.type=UsesDependency
 dependency3.from=Ocean
 dependency3.to=Seahorse
 dependency3.type=UsesDependency
-editor.fx.0.height=779
+editor.fx.0.height=722
 editor.fx.0.width=800
-editor.fx.0.x=640
-editor.fx.0.y=23
+editor.fx.0.x=580
+editor.fx.0.y=39
 height=727
 package.numDependencies=3
 package.numTargets=5

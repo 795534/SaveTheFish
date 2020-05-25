@@ -14,9 +14,8 @@ public class Human extends Actor
      */
     private int speed = 5;
     private GreenfootImage rightScuba = new GreenfootImage("rightScuba.png");
-    //rightScuba.scale(rightScuba.getWidth()-20, rightScuba.getHeight()-20);
     private GreenfootImage leftScuba = new GreenfootImage("leftScuba.png");
-    
+
     public void act() 
     {
         checkKeys();
