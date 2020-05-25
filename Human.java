@@ -12,13 +12,21 @@ public class Human extends Actor
      * Act - do whatever the Human wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    private int speed = 5;
-    private GreenfootImage rightScuba = new GreenfootImage("rightScuba.png");
-    private GreenfootImage leftScuba = new GreenfootImage("leftScuba.png");
-
+    private int trashPicked;
+    private GreenfootImage rightScuba;
+    private GreenfootImage leftScuba;
+    
+    public Human()
+    {
+        rightScuba = new GreenfootImage("rightScuba.png");
+        leftScuba = new GreenfootImage("leftScuba.png");
+        setImage(rightScuba);
+        trashPicked = 0;
+    }
     public void act() 
     {
         checkKeys();
+        lookForTrash();
     }    
     
     private void checkKeys()
@@ -43,6 +51,9 @@ public class Human extends Actor
         }
     }
 
-    
+    public void lookForTrash()
+    {
+        
+    }
 }
 
