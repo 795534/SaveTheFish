@@ -1,7 +1,10 @@
 #BlueJ class context
 comment0.target=Ocean
-comment0.text=\n\ Ocean\ World\n\ \n\ @author\ Christina\ Young,\ Jessica\ Yu,\ Annika\ Lin\n\ @version\ May\ 2020\n
+comment0.text=\r\n\ Ocean\ World\r\n\ \r\n\ @author\ Christina\ Young,\ Jessica\ Yu,\ Annika\ Lin\r\n\ @version\ May\ 2020\r\n
 comment1.params=
 comment1.target=Ocean()
-comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Ocean.\n\ \n
-numComments=2
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Ocean.\r\n\ \r\n
+comment2.params=
+comment2.target=void\ populate()
+comment2.text=\r\n\ Populate\ the\ world\ with\ a\ fixed\ scenario\ of\ sea\ creatures.\r\n
+numComments=3

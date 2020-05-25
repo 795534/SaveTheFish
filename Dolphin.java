@@ -14,6 +14,15 @@ public class Dolphin extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
+        for (int i =0; i<90; i+=10)
+        {
+            move(1);
+            turn(i);
+            if (i==89)
+            {
+                i=0;
+            }   
+        }    
+        
     }    
 }
