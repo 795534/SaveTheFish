@@ -47,7 +47,11 @@ width=830
 world.lastInstantiated=MyWorld
 xPosition=0
 <<<<<<< HEAD
+<<<<<<< HEAD
 yPosition=24
+=======
+yPosition=23
+>>>>>>> 0ac65c6f8ea2b5b05b2ad8b7b8ceb34ca92b2eef
 =======
 yPosition=23
 >>>>>>> 0ac65c6f8ea2b5b05b2ad8b7b8ceb34ca92b2eef
