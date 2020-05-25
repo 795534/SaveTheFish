@@ -17,7 +17,7 @@ public class Ocean extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
-        
+        populate();
     }
     /**
      * Populate the world with a fixed scenario of sea creatures.
@@ -42,5 +42,13 @@ public class Ocean extends World
         Seahorse s1 = new Seahorse();
         addObject(s1, 350, 200);
         
-    }   
+        Human scuba = new Human(); 
+        addObject(scuba, 300, 200);
+        
+        for (int i=0; i < 5; i++)
+        {
+            addObject(new Trash(), Greenfoot.getRandomNumber(566) + 34, Greenfoot.getRandomNumber(370) + 30);
+        }  
+    }
+    
 }
