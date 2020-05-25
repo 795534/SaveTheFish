@@ -1,9 +1,10 @@
 #Greenfoot project file
 class.Dolphin.image=dolphin.png
-editor.fx.0.height=739
-editor.fx.0.width=816
-editor.fx.0.x=413
-editor.fx.0.y=46
+class.Human.image=man01.png
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
+editor.fx.0.y=0
 height=799
 package.numDependencies=0
 package.numTargets=3
@@ -22,14 +23,14 @@ readme.x=10
 readme.y=10
 simulation.speed=50
 target1.height=50
-target1.name=Dolphin
+target1.name=Human
 target1.showInterface=false
 target1.type=ClassTarget
 target1.width=80
 target1.x=0
 target1.y=0
 target2.height=50
-target2.name=Fish
+target2.name=Dolphin
 target2.showInterface=false
 target2.type=ClassTarget
 target2.width=80
@@ -46,12 +47,4 @@ version=3.0.0
 width=830
 world.lastInstantiated=MyWorld
 xPosition=0
-<<<<<<< HEAD
-<<<<<<< HEAD
-yPosition=24
-=======
 yPosition=23
->>>>>>> 0ac65c6f8ea2b5b05b2ad8b7b8ceb34ca92b2eef
-=======
-yPosition=23
->>>>>>> 0ac65c6f8ea2b5b05b2ad8b7b8ceb34ca92b2eef
