@@ -56,9 +56,13 @@ public class Ocean extends World
         }  
     }
     
-    public void play()
+    public void act()
     {
-        
+        timer++;
+        if(timer % 100 == 0)
+        {
+            pollute();
+        }
     }
     
     /**
