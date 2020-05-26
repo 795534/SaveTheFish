@@ -14,6 +14,13 @@ public class Seahorse extends Actor
      */
     public void act() 
     {
-        move(1);
+        move(1);      
+        if(isAtEdge())
+        {
+            turnTowards(300, 300);
+            GreenfootImage img = getImage();
+            img.mirrorVertically();
+            setImage(img);
+        }
     }    
 }
