@@ -45,7 +45,7 @@ public class Ocean extends World
         addObject(f3, 500, 300);
         
         Seahorse s1 = new Seahorse();
-        addObject(s1, 350, 200);
+        addObject(s1, 350, 360);
         
         Human scuba = new Human(); 
         addObject(scuba, 300, 200);

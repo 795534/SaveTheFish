@@ -14,15 +14,19 @@ public class Dolphin extends Actor
      */
     public void act() 
     {
-        for (int i =0; i<90; i+=10)
-        {
-            move(1);
-            turn(i);
-            if (i==89)
-            {
-                i=0;
-            }   
+        move(2);
+        turn(1);
+        if(getX() >= 550){
+            setLocation(10, getY());
         }    
         
+        if (getY() <= 20)
+        {
+            turn(30);
+        }   
+        if (getY() >= 150)
+        {
+            turn(-30);
+        }
     }    
 }

@@ -15,5 +15,14 @@ public class Seahorse extends Actor
     public void act() 
     {
         move(1);
+        
+        if (getX() <= 5 || getX() >= 595)
+        {
+            turn(Greenfoot.getRandomNumber(45));
+        }
+        if (getY() <= 350 || getY() >= 395)
+        {
+            turn(Greenfoot.getRandomNumber(45));
+        }
     }    
 }
