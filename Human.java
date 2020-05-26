@@ -28,8 +28,7 @@ public class Human extends Actor
     {
         checkKeys();
         lookForTrash();
-        setLocation((getX()+getWorld().getWidth())%getWorld().getWidth(), (getY()+getWorld().getHeight())%getWorld().getHeight());
-
+        checkEdge();
     }    
     
     private void checkKeys()
@@ -57,6 +56,18 @@ public class Human extends Actor
     public void lookForTrash()
     {
         
+    }
+    
+    public void checkEdge()
+    {
+        if (getX() == getWorld().getWidth()-1)
+        {
+            setImage(leftScuba);
+        }
+        if (getX()==0)
+        {
+            setImage(rightScuba);
+        }
     }
 }
 
