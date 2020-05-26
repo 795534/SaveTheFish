@@ -23,10 +23,13 @@ public class Human extends Actor
         setImage(rightScuba);
         trashPicked = 0;
     }
+    
     public void act() 
     {
         checkKeys();
         lookForTrash();
+        setLocation((getX()+getWorld().getWidth())%getWorld().getWidth(), (getY()+getWorld().getHeight())%getWorld().getHeight());
+
     }    
     
     private void checkKeys()
