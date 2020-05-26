@@ -14,15 +14,11 @@ public class Seahorse extends Actor
      */
     public void act() 
     {
-        move(1);
-        
-        if (getX() <= 5 || getX() >= 595)
+        move(1);       
+        if (isAtEdge())
         {
-            turn(Greenfoot.getRandomNumber(45));
-        }
-        if (getY() <= 350 || getY() >= 395)
-        {
-            turn(Greenfoot.getRandomNumber(45));
+            turnTowards(300, 300);
+            getImage().mirrorVertically();
         }
     }    
 }
