@@ -16,9 +16,12 @@ public class Fish extends Actor
     {
         move(2);
         
-        if (getX() <= 5 || getX() >= 595)
+        if(isAtEdge())
         {
-            turn(50);
+            turnTowards(300, 300);
+            GreenfootImage img = getImage();
+            img.mirrorVertically();
+            setImage(img);
         }
         if (getY() <= 150 || getY() >= 395)
         {
