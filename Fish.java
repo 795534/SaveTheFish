@@ -14,6 +14,18 @@ public class Fish extends Actor
      */
     public void act() 
     {
-        move(6);
+        move(2);
+        if (Greenfoot.getRandomNumber(100) < 5)
+        {
+            turn(Greenfoot.getRandomNumber(90) - 45);
+        }
+        if (getX() <= 5 || getX() >= 595)
+        {
+            turn(180);
+        }
+        if (getY() <= 150 || getY() >= 395)
+        {
+            turn(180);
+        }
     }    
 }
