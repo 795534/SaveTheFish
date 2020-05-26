@@ -59,7 +59,7 @@ public class Ocean extends World
     public void act()
     {
         timer++;
-        if(timer % 100 == 0)
+        if(timer % 200 == 0)
         {
             pollute();
         }
@@ -70,7 +70,7 @@ public class Ocean extends World
      */
     public void pollute()
     {
-        addObject(new Trash(), Greenfoot.getRandomNumber(566) + 34, Greenfoot.getRandomNumber(370) + 30);
+        addObject(new Trash(), Greenfoot.getRandomNumber(566) + 34, Greenfoot.getRandomNumber(80));
         Greenfoot.playSound("BubblesShort.mp3");
     }
 }
