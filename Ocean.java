@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.ArrayList;
 /**
  * Ocean World
  * 
@@ -11,7 +11,7 @@ public class Ocean extends World
     private GreenfootSound ocean = new GreenfootSound("OceanSounds.mp3");  
     private GreenfootSound music = new GreenfootSound("OceanMusic.mp3");
     private int timer = 0;
-    
+    static ArrayList<Trash> trashItems = new ArrayList<Trash>();
     /**
      * Constructor for objects of class Ocean.
      * 
@@ -70,7 +70,11 @@ public class Ocean extends World
      */
     public void pollute()
     {
-        addObject(new Trash(), Greenfoot.getRandomNumber(566) + 34, Greenfoot.getRandomNumber(80));
+        int randomX = Greenfoot.getRandomNumber(566) + 34;
+        int randomY = Greenfoot.getRandomNumber(80);
+        Trash newTrash = new Trash(randomX, randomY);
+        addObject(newTrash, randomX, randomY);
+        trashItems.add(newTrash);
         Greenfoot.playSound("BubblesShort.mp3");
     }
 }
