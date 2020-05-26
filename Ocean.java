@@ -8,7 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Ocean extends World
 {
-
+    private GreenfootSound ocean = new GreenfootSound("OceanSounds.mp3");  
+    private GreenfootSound music = new GreenfootSound("OceanMusic.mp3");
+    private int timer = 0;
+    
     /**
      * Constructor for objects of class Ocean.
      * 
@@ -16,14 +19,16 @@ public class Ocean extends World
     public Ocean()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(600, 400, 1, false);   
         populate();
+        ocean.playLoop();
+        music.playLoop();
     }
     /**
      * Populate the world with a fixed scenario of sea creatures.
      */    
     public void populate()
-    {
+    {       
         Dolphin d1 = new Dolphin();
         addObject(d1, 300, 100);
         
@@ -47,8 +52,21 @@ public class Ocean extends World
         
         for (int i=0; i < 5; i++)
         {
-            addObject(new Trash(), Greenfoot.getRandomNumber(566) + 34, Greenfoot.getRandomNumber(370) + 30);
+            pollute();
         }  
     }
     
+    public void play()
+    {
+        
+    }
+    
+    /**
+     * Add more trash 
+     */
+    public void pollute()
+    {
+        addObject(new Trash(), Greenfoot.getRandomNumber(566) + 34, Greenfoot.getRandomNumber(370) + 30);
+        Greenfoot.playSound("BubblesShort.mp3");
+    }
 }
