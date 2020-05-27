@@ -32,7 +32,6 @@ public class Dolphin extends Actor
             {
                 turn(-30);
             }
-
             if(isTouching(Trash.class))
             {
                 die();
@@ -42,11 +41,8 @@ public class Dolphin extends Actor
 
     public void die()
     {
-        isAlive = false;
+        isAlive = false; 
         setImage("deaddolphin.png");
-        for(int i = getY(); getY() < 600; i++)
-        {
-            setLocation(getX(),i);
-        }
+        Ocean.numAlive--;
     }
 }

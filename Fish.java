@@ -41,9 +41,6 @@ public class Fish extends Actor
     {
         isAlive = false;
         setImage("deadfish.png");
-        for(int i = getY(); getY() < 600; i++)
-        {
-            setLocation(getX(),i);
-        }
+        Ocean.numAlive--;
     }
 }

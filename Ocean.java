@@ -12,6 +12,8 @@ public class Ocean extends World
     private GreenfootSound music = new GreenfootSound("OceanMusic.mp3");
     private int timer = 0;
     static ArrayList<Trash> trashItems = new ArrayList<Trash>();
+    static int numAlive;
+    
     /**
      * Constructor for objects of class Ocean.
      * 
@@ -31,21 +33,27 @@ public class Ocean extends World
     {       
         Dolphin d1 = new Dolphin();
         addObject(d1, 300, 100);
+        numAlive++;
         
         Dolphin d2 = new Dolphin();
         addObject(d2, 100, 100);
+        numAlive++;
         
         Fish f1 = new Fish();
         addObject(f1, 200, 300);
+        numAlive++;
         
         Fish f2 = new Fish();
         addObject(f2, 400, 300);
+        numAlive++;
         
         Fish f3 = new Fish();
         addObject(f3, 500, 300);
+        numAlive++;
         
         Seahorse s1 = new Seahorse();
         addObject(s1, 350, 360);
+        numAlive++;
         
         Human scuba = new Human(); 
         addObject(scuba, 300, 200);
@@ -62,6 +70,11 @@ public class Ocean extends World
         if(timer % 200 == 0)
         {
             pollute();
+        }
+        //stops the game if all animals die
+        if(numAlive == 0)
+        {
+            Greenfoot.stop();
         }
     }
     

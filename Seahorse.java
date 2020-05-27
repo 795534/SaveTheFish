@@ -23,7 +23,6 @@ public class Seahorse extends Actor
                 turnTowards(300, 300);
                 getImage().mirrorVertically();
             }
-
             if(isTouching(Trash.class))
             {
                 die();
@@ -35,9 +34,8 @@ public class Seahorse extends Actor
     {
         isAlive = false;
         setImage("deadseahorse.png");
-        for(int i = getY(); getY() < 600; i++)
-        {
-            setLocation(getX(),i);
-        }
-    }
+        Ocean.numAlive--;
+        int xint = getX();
+        int yint = getY();  
+    }  
 }
