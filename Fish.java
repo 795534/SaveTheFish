@@ -8,24 +8,42 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Fish extends Actor
 {
+    private boolean isAlive = true;
+
     /**
      * Act - do whatever the Fish wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        move(2);
-        
-        if(isAtEdge())
+        if(isAlive)
         {
-            turnTowards(300, 300);
-            GreenfootImage img = getImage();
-            img.mirrorVertically();
-            setImage(img);
-        }
-        if (getY() <= 150 || getY() >= 395)
-        {
-            turn(50);
+            move(2);
+            if(isAtEdge())
+            {
+                turnTowards(300, 300);
+                GreenfootImage img = getImage();
+                img.mirrorVertically();
+                setImage(img);
+            }
+            if (getY() <= 150 || getY() >= 395)
+            {
+                turn(50);
+            }
+            if(isTouching(Trash.class))
+            {
+                die();
+            }
         }
     }    
+
+    public void die()
+    {
+        isAlive = false;
+        setImage("deadfish.png");
+        for(int i = getY(); getY() < 600; i++)
+        {
+            setLocation(getX(),i);
+        }
+    }
 }

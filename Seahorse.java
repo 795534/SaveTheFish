@@ -8,17 +8,36 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Seahorse extends Actor
 {
+    private boolean isAlive = true;
     /**
      * Act - do whatever the Seahorse wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        move(1);       
-        if (isAtEdge())
+        if(isAlive)
         {
-            turnTowards(300, 300);
-            getImage().mirrorVertically();
+            move(1);       
+            if (isAtEdge())
+            {
+                turnTowards(300, 300);
+                getImage().mirrorVertically();
+            }
+
+            if(isTouching(Trash.class))
+            {
+                die();
+            }
         }
     }    
+
+    public void die()
+    {
+        isAlive = false;
+        setImage("deadseahorse.png");
+        for(int i = getY(); getY() < 600; i++)
+        {
+            setLocation(getX(),i);
+        }
+    }
 }

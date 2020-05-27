@@ -8,25 +8,45 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Dolphin extends Actor
 {
+    private boolean isAlive = true;
+
     /**
      * Act - do whatever the Dolphin wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        move(2);
-        turn(1);
-        if(getX() >= 550){
-            setLocation(10, getY());
-        }    
-        
-        if (getY() <= 20)
+        if(isAlive)
         {
-            turn(30);
-        }   
-        if (getY() >= 150)
-        {
-            turn(-30);
+            move(2);
+            turn(1);
+            if(getX() >= 550){
+                setLocation(10, getY());
+            }    
+
+            if (getY() <= 20)
+            {
+                turn(30);
+            }   
+            if (getY() >= 150)
+            {
+                turn(-30);
+            }
+
+            if(isTouching(Trash.class))
+            {
+                die();
+            }
         }
     }    
+
+    public void die()
+    {
+        isAlive = false;
+        setImage("deaddolphin.png");
+        for(int i = getY(); getY() < 600; i++)
+        {
+            setLocation(getX(),i);
+        }
+    }
 }
