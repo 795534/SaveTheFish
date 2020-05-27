@@ -15,7 +15,7 @@ public class Human extends Actor
     private int trashPicked;
     private GreenfootImage rightScuba;
     private GreenfootImage leftScuba;
-    
+    //private GreenfootSound grabTrash = new GreenfootSound("grabTrash.mp3");  
     public Human()
     {
         rightScuba = new GreenfootImage("rightScuba.png");
@@ -66,6 +66,7 @@ public class Human extends Actor
                 if (getImage().equals(leftScuba) && (xDistance <= - 30 && xDistance >= -100))
                 {
                    World ocean = getWorld();
+                   Greenfoot.playSound("grabTrash.mp3");
                    ocean.removeObject(Ocean.trashItems.get(i));
                    Ocean.trashItems.remove(i);
                    i--;
@@ -74,11 +75,13 @@ public class Human extends Actor
                 if (getImage().equals(rightScuba) && (xDistance >= 30 && xDistance <= 100))
                 {
                    World ocean = getWorld();
+                   Greenfoot.playSound("grabTrash.mp3");
                    ocean.removeObject(Ocean.trashItems.get(i));
                    Ocean.trashItems.remove(i);
                    i--;
                    trashPicked++;
                 }
+                
             }
         }
     }
