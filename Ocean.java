@@ -39,6 +39,10 @@ public class Ocean extends World
         addObject(d2, 100, 100);
         numAlive++;
         
+        Dolphin d3 = new Dolphin();
+        addObject(d3, 200, 100);
+        numAlive++;
+        
         Fish f1 = new Fish();
         addObject(f1, 200, 300);
         numAlive++;
@@ -74,6 +78,7 @@ public class Ocean extends World
         //stops the game if all animals die
         if(numAlive == 0)
         {
+            //setImage("polluted.png");
             Greenfoot.stop();
         }
     }

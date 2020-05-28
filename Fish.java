@@ -32,6 +32,9 @@ public class Fish extends Actor
             }
             if(isTouching(Trash.class))
             {
+                turnTowards(getX(), 390);
+                move(1);
+                setLocation(getX(), 390);
                 die();
             }
         }
