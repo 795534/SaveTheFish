@@ -13,7 +13,7 @@ public class Ocean extends World
     private int timer = 0;
     static ArrayList<Trash> trashItems = new ArrayList<Trash>();
     static int numAlive;
-    
+    static int numTrash;
     /**
      * Constructor for objects of class Ocean.
      * 
@@ -78,7 +78,16 @@ public class Ocean extends World
         //stops the game if all animals die
         if(numAlive == 0)
         {
-            //setImage("polluted.png");
+            Fail fail = new Fail();
+            addObject(fail, 300, 200);
+            
+            Greenfoot.stop();
+        }
+        if(numTrash == 0)
+        {
+            Pass pass= new Pass();
+            addObject(pass, 300, 200);
+            
             Greenfoot.stop();
         }
     }
@@ -92,7 +101,12 @@ public class Ocean extends World
         int randomY = Greenfoot.getRandomNumber(80);
         Trash newTrash = new Trash(randomX, randomY);
         addObject(newTrash, randomX, randomY);
+        numTrash++;
         trashItems.add(newTrash);
         Greenfoot.playSound("BubblesShort.mp3");
     }
+    public int trash()
+    {
+        return numTrash;
+    }    
 }

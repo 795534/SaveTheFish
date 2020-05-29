@@ -36,7 +36,7 @@ public class Human extends Actor
         if(Greenfoot.isKeyDown("right"))
         {
             setImage(rightScuba);
-            move(2);
+            move(6);
         }
         if(Greenfoot.isKeyDown("left"))
         {
@@ -70,7 +70,7 @@ public class Human extends Actor
                    ocean.removeObject(Ocean.trashItems.get(i));
                    Ocean.trashItems.remove(i);
                    i--;
-                   trashPicked++;
+                   Ocean.numTrash--;
                 }
                 if (getImage().equals(rightScuba) && (xDistance >= 30 && xDistance <= 100))
                 {
@@ -79,7 +79,7 @@ public class Human extends Actor
                    ocean.removeObject(Ocean.trashItems.get(i));
                    Ocean.trashItems.remove(i);
                    i--;
-                   trashPicked++;
+                   Ocean.numTrash--;
                 }
                 
             }
@@ -97,6 +97,5 @@ public class Human extends Actor
             setImage(rightScuba);
         }
     }
-
 }
 
