@@ -11,9 +11,8 @@ public class Ocean extends World
     private GreenfootSound ocean = new GreenfootSound("OceanSounds.mp3");  
     private GreenfootSound music = new GreenfootSound("OceanMusic.mp3");
     private int timer = 0;
-    static ArrayList<Trash> trashItems = new ArrayList<Trash>();
+    static ArrayList<Trash> trashItems;
     static int numAlive;
-    static int numTrash;
     /**
      * Constructor for objects of class Ocean.
      * 
@@ -22,11 +21,11 @@ public class Ocean extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1);   
-        
+        trashItems = new ArrayList<Trash>();
         //Intro in = new Intro();
         //addObject(in, 300,200);
         //removeObject(in);
-        
+        numAlive = 0;
         populate();
         ocean.playLoop();
         music.playLoop();
@@ -36,7 +35,6 @@ public class Ocean extends World
      */    
     public void populate()
     {       
-        
         Dolphin d1 = new Dolphin();
         addObject(d1, 300, 100);
         numAlive++;
@@ -75,21 +73,21 @@ public class Ocean extends World
     }
     
     public void act()
-    {
+    {       
         timer++;
         if(timer % 200 == 0)
         {
             pollute();
         }
         //stops the game if all animals die
-        if(numAlive == 0)
+        if (numAlive == 0)
         {
             Fail fail = new Fail();
             addObject(fail, 300, 200);
             
             Greenfoot.stop();
         }
-        if(numTrash == 0)
+        if (trashItems.size() == 0)
         {
             Pass pass= new Pass();
             addObject(pass, 300, 200);
@@ -107,12 +105,8 @@ public class Ocean extends World
         int randomY = Greenfoot.getRandomNumber(80);
         Trash newTrash = new Trash(randomX, randomY);
         addObject(newTrash, randomX, randomY);
-        numTrash++;
         trashItems.add(newTrash);
         Greenfoot.playSound("BubblesShort.mp3");
     }
-    public int trash()
-    {
-        return numTrash;
-    }    
+
 }
