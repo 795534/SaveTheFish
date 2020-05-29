@@ -39,15 +39,15 @@ public class Ocean extends World
     {       
         
         Dolphin d1 = new Dolphin();
-        addObject(d1, 300, 100);
+        addObject(d1, 300, 130);
         numAlive++;
         
         Dolphin d2 = new Dolphin();
-        addObject(d2, 100, 100);
+        addObject(d2, 100, 130);
         numAlive++;
         
         Dolphin d3 = new Dolphin();
-        addObject(d3, 200, 100);
+        addObject(d3, 200, 130);
         numAlive++;
         
         Fish f1 = new Fish();
