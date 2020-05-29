@@ -12,13 +12,16 @@ public class Human extends Actor
      * Act - do whatever the Human wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    private int trashPicked;
     private GreenfootImage rightScuba;
     private GreenfootImage leftScuba;
+    //private GreenfootSound grabTrash = new GreenfootSound("grabTrash.mp3");  
     public Human()
     {
         rightScuba = new GreenfootImage("rightScuba.png");
         leftScuba = new GreenfootImage("leftScuba.png");
         setImage(rightScuba);
+        trashPicked = 0;
     }
     
     public void act() 
@@ -38,7 +41,7 @@ public class Human extends Actor
         if(Greenfoot.isKeyDown("left"))
         {
             setImage(leftScuba);
-            move(-6);
+            move(-2);
         }
         if(Greenfoot.isKeyDown("down"))
         {
@@ -67,6 +70,7 @@ public class Human extends Actor
                    ocean.removeObject(Ocean.trashItems.get(i));
                    Ocean.trashItems.remove(i);
                    i--;
+                   Ocean.numTrash--;
                 }
                 if (getImage().equals(rightScuba) && (xDistance >= 30 && xDistance <= 100))
                 {
@@ -75,6 +79,7 @@ public class Human extends Actor
                    ocean.removeObject(Ocean.trashItems.get(i));
                    Ocean.trashItems.remove(i);
                    i--;
+                   Ocean.numTrash--;
                 }
                 
             }
