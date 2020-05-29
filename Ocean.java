@@ -51,23 +51,23 @@ public class Ocean extends World
         numAlive++;
         
         Fish f1 = new Fish();
-        addObject(f1, 200, 300);
+        addObject(f1, 150, 300);
         numAlive++;
         
         Fish f2 = new Fish();
-        addObject(f2, 400, 300);
+        addObject(f2, 450, 300);
         numAlive++;
         
         Fish f3 = new Fish();
-        addObject(f3, 500, 300);
+        addObject(f3, 550, 300);
         numAlive++;
         
         Seahorse s1 = new Seahorse();
-        addObject(s1, 350, 360);
+        addObject(s1, 200, 360);
         numAlive++;
         
         Human scuba = new Human(); 
-        addObject(scuba, 300, 200);
+        addObject(scuba, 500, 100);
         
         for (int i=0; i < 5; i++)
         {

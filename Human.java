@@ -18,7 +18,7 @@ public class Human extends Actor
     {
         rightScuba = new GreenfootImage("rightScuba.png");
         leftScuba = new GreenfootImage("leftScuba.png");
-        setImage(rightScuba);
+        setImage(leftScuba);
     }
     
     public void act() 
