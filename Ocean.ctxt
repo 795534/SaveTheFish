@@ -12,6 +12,4 @@ comment3.target=void\ act()
 comment4.params=
 comment4.target=void\ pollute()
 comment4.text=\n\ Add\ more\ trash\ \n
-comment5.params=
-comment5.target=int\ trash()
-numComments=6
+numComments=5
