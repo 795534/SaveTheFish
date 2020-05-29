@@ -14,6 +14,7 @@ public class Ocean extends World
     static ArrayList<Trash> trashItems = new ArrayList<Trash>();
     static int numAlive;
     static int numTrash;
+    
     /**
      * Constructor for objects of class Ocean.
      * 
@@ -22,7 +23,7 @@ public class Ocean extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1);   
-        
+        setBackground("intro.png");
         //Intro in = new Intro();
         //addObject(in, 300,200);
         //removeObject(in);
@@ -76,6 +77,7 @@ public class Ocean extends World
     
     public void act()
     {
+        setBackground("Ocean.png");
         timer++;
         if(timer % 200 == 0)
         {
