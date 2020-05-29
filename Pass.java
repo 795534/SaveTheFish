@@ -15,8 +15,8 @@ public class Pass extends Actor
     public void act() 
     {
         GreenfootImage img = new GreenfootImage(200, 200);
-        Greenfoot.playSound("winSound.wav");
         img.drawString("You Saved the Oean!", 50, 60);
+        Greenfoot.playSound("winSound.wav");
         img.scale(500,500);
         setImage(img);
     }    
