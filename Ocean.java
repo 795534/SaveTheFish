@@ -22,6 +22,11 @@ public class Ocean extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1);   
+        
+        //Intro in = new Intro();
+        //addObject(in, 300,200);
+        //removeObject(in);
+        
         populate();
         ocean.playLoop();
         music.playLoop();
@@ -31,6 +36,7 @@ public class Ocean extends World
      */    
     public void populate()
     {       
+        
         Dolphin d1 = new Dolphin();
         addObject(d1, 300, 100);
         numAlive++;
