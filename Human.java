@@ -60,7 +60,7 @@ public class Human extends Actor
             int yDistance = Math.abs(trashYCoor - this.getY());
             if (yDistance < 15)
             {
-                if (getImage().equals(leftScuba) && (xDistance <= - 30 && xDistance >= -100))
+                if (getImage().equals(leftScuba) && (xDistance <= - 20 && xDistance >= -100))
                 {
                    World ocean = getWorld();
                    Greenfoot.playSound("grabTrash.mp3");
@@ -68,7 +68,7 @@ public class Human extends Actor
                    Ocean.trashItems.remove(i);
                    i--;
                 }
-                if (getImage().equals(rightScuba) && (xDistance >= 30 && xDistance <= 100))
+                if (getImage().equals(rightScuba) && (xDistance >= 20 && xDistance <= 100))
                 {
                    World ocean = getWorld();
                    Greenfoot.playSound("grabTrash.mp3");

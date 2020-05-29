@@ -15,6 +15,7 @@ public class Fail extends Actor
     public void act() 
     {
         GreenfootImage img = new GreenfootImage(200, 200);
+        Greenfoot.playSound("loseSound.mp3");
         img.drawString("Too Much Pollution. Game Over.", 10, 60);
         img.scale(500,500);
         setImage(img);
